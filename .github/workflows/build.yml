@@ -17,10 +17,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          # list of Docker images to use as base name for tags
-          images: |
-            richardcase/ubuntu-bionic
-          # generate Docker tags based on the following events/attributes
+          images: richardcase/ubuntu-bionic-kernel
           tags: |
             type=schedule
             type=ref,event=branch
@@ -41,6 +38,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
