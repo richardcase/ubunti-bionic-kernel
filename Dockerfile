@@ -3,6 +3,6 @@ FROM scratch
 
 WORKDIR /
 
-ADD out/vmlinux vmlinux
-ADD out/initrd-generic initrd-generic
+ADD vmlinux vmlinux
+ADD initrd-generic initrd-generic
 
