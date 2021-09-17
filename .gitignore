@@ -1,1 +1,3 @@
-out/
+initrd-generic
+vmlinuz
+vmlinux

@@ -27,13 +27,13 @@ mkdir -p out
 
 kernel=$UBUNTU_VERSION-server-cloudimg-amd64-vmlinuz-generic
 download_if_not_present \
-	out/vmlinuz \
+	vmlinuz \
 	https://cloud-images.ubuntu.com/$UBUNTU_VERSION/current/unpacked/$kernel
 
 initrd=$UBUNTU_VERSION-server-cloudimg-amd64-initrd-generic
 download_if_not_present \
-	out/initrd-generic \
+	initrd-generic \
 	https://cloud-images.ubuntu.com/$UBUNTU_VERSION/current/unpacked/$initrd
 
 
-./extract-vmlinux.sh out/vmlinuz > out/vmlinux
+./extract-vmlinux.sh out/vmlinuz > vmlinux
