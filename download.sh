@@ -36,4 +36,4 @@ download_if_not_present \
 	https://cloud-images.ubuntu.com/$UBUNTU_VERSION/current/unpacked/$initrd
 
 
-./extract-vmlinux.sh out/vmlinuz > vmlinux
+./extract-vmlinux.sh vmlinuz > vmlinux
